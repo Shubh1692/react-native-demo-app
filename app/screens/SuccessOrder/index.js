@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Dimensions } from 'react-native';
-import { CustomView, CustomContainer, CustomContent, CustomThumbnail, CustomText, CustomButton, CustomScrollView } from '../../components/CustomStyledComponent';
+import { CustomView, CustomContainer, CustomContent, CustomThumbnail, CustomText, CustomScrollView } from '../../components/CustomStyledComponent';
 
 
 const { width } = Dimensions.get('window');
@@ -56,11 +56,12 @@ class SuccessOrder extends Component {
         };
 
         const purchaseItemListTitleProps = {
-            customCss: `font-size:12;font-weight:bold;text-align:left;width:40%;`
+            customCss: `font-size:12;font-weight:bold;text-align:left;width:50%;padding:10px;`
         };
 
         const purchaseItemListThumbnailProps = {
-            customCss: `width:10%;`
+            customCss: `width:20px;height:20px;`,
+            square: true
         };
 
         const purchaseItemListButtonViewProps = {
@@ -112,13 +113,13 @@ class SuccessOrder extends Component {
         };
 
         const deliveryAddressContentViewPayAmountProps = {
-            customCss: `flex-direction: row; font-size:11;font-weight:normal;text-align:center;justify-content:space-between;align-items:center;font-weight:bold;padding-left:10px;padding-right:10px;margin-bottom:10px;`
+            customCss: `width:100%;flex-direction: row; font-size:11;font-weight:normal;text-align:center;justify-content:space-between;align-items:center;font-weight:bold;padding-left:10px;padding-right:10px;margin-bottom:10px;`
         };
 
         const deliveryAddressContentTextPayAmountProps = {
-            customCss: `flex-direction: row; font-size:10;font-weight:bold;text-align:left;justify-content:space-between;align-items:center;color:gray;padding:10px;background-color:lightgray;`
+            customCss: `width:100%;flex-direction: row; font-size:10;font-weight:bold;text-align:left;justify-content:space-between;align-items:center;color:gray;padding:10px;background-color:lightgray;`
         };
-
+        console.log(purchaseItems);
         return (
             <CustomContainer {...containerProps}>
                 <CustomContent {...contentProps}>
@@ -126,7 +127,7 @@ class SuccessOrder extends Component {
                         {purchaseItems.map((purchaseItem, index) => (
                             <CustomView {...purchaseItemListItemProps} key={index}>
                                 <CustomThumbnail {...purchaseItemListThumbnailProps} source={{
-                                    url: purchaseItem.image
+                                    uri: purchaseItem.image
                                 }} />
                                 <CustomText {...purchaseItemListTitleProps}>{purchaseItem.name}</CustomText>
                                 <CustomView {...purchaseItemListButtonViewProps}>

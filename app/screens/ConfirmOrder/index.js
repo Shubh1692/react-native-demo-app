@@ -11,7 +11,7 @@ const findTotal = (purchaseItems) => {
     }
 }
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 class ConfirmOrder extends Component {
     static propTypes = {
 
@@ -27,7 +27,7 @@ class ConfirmOrder extends Component {
             amount: 0,
             discount: 0,
             deliveryFee: 0,
-            deliveryAddress: '37 Govind nagar Charan nadi 2nd, Nfldjsflsjfksdjfldskfjldksjflsdkfjdsfadi ka phatak, Jaipur, Rajasthan',
+            deliveryAddress: '37 Govind nagar Charan nadi 2nd, Nadi ka phatak, Jaipur, Rajasthan',
             items: [{
                 image: 'https://www.bigbasket.com/media/uploads/p/l/30011828_4-bikaji-namkeen-bikaneri-bhujia.jpg',
                 name: 'Bikaji Bikaneri Bhujiya 1kg',
@@ -313,11 +313,11 @@ class ConfirmOrder extends Component {
         }
 
         const deliveryAddressContentViewPayAmountProps = {
-            customCss: `flex-direction: row; font-size:11;font-weight:normal;text-align:center;justify-content:space-between;align-items:center;font-weight:bold;padding-left:10px;padding-right:10px;margin-bottom:10px;`
+            customCss: `width:100%;flex-direction: row; font-size:11;font-weight:normal;text-align:center;justify-content:space-between;align-items:center;font-weight:bold;padding-left:10px;padding-right:10px;margin-bottom:10px;`
         };
 
         const deliveryAddressContentTextPayAmountProps = {
-            customCss: `flex-direction: row; font-size:10;font-weight:bold;text-align:left;justify-content:space-between;align-items:center;color:gray;padding:10px;background-color:lightgray;`
+            customCss: `width:100%;flex-direction: row; font-size:10;font-weight:bold;text-align:left;justify-content:space-between;align-items:center;color:gray;padding:10px;background-color:lightgray;`
         };
 
         const footerViewProps = {
