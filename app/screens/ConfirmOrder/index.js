@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Dimensions, Alert } from 'react-native';
 import { CustomView, CustomImage, CustomContainer, CustomContent, CustomThumbnail, CustomFooter, CustomText, CustomButton, CustomScrollView } from '../../components/CustomStyledComponent';
+
 const findTotal = (purchaseItems) => {
     const totalAmount = purchaseItems.length > 0 ? purchaseItems.reduce((a, b) => (a + b.amount), 0) : 0;
     const totalDiscount = purchaseItems.length > 0 ? purchaseItems.reduce((a, b) => (a + b.discount_amount), 0) : 0;
@@ -28,43 +29,43 @@ class ConfirmOrder extends Component {
             deliveryFee: 0,
             deliveryAddress: '37 Govind nagar Charan nadi 2nd, Nfldjsflsjfksdjfldskfjldksjflsdkfjdsfadi ka phatak, Jaipur, Rajasthan',
             items: [{
-                image: 'https://www.rewardsnetwork.com/wp-content/uploads/2016/01/MexicanFood_Main_Huevos.jpg',
+                image: 'https://www.bigbasket.com/media/uploads/p/l/30011828_4-bikaji-namkeen-bikaneri-bhujia.jpg',
                 name: 'Bikaji Bikaneri Bhujiya 1kg',
                 actual_price: 220,
                 discount: 65
             }, {
-                image: 'https://www.rewardsnetwork.com/wp-content/uploads/2016/01/MexicanFood_Main_Huevos.jpg',
-                name: 'Bikaji Bikaneri Bhujiya 1kg',
+                image: 'https://www.bigbasket.com/media/uploads/p/l/70000791_1-haldirams-namkeen-navrattan-del.jpg',
+                name: 'Haldiram Namkeen 1kg',
                 actual_price: 220,
                 discount: 55
             }, {
-                image: 'https://www.rewardsnetwork.com/wp-content/uploads/2016/01/MexicanFood_Main_Huevos.jpg',
-                name: 'Bikaji Bikaneri Bhujiya 1kg',
+                image: 'http://paulwriter.com/wp-content/uploads/2014/08/Parle-Products-Aloo-Laccha-Piri-Piri-Flavour.jpg',
+                name: 'Parle Namkeen 1kg',
                 actual_price: 220,
                 discount: 75
             }, {
-                image: 'https://www.rewardsnetwork.com/wp-content/uploads/2016/01/MexicanFood_Main_Huevos.jpg',
-                name: 'Bikaji Bikaneri Bhujiya 1kg',
+                image: 'http://www.sme.in/shankarfood/images/Rajshri-Potato-Fariyali-Namkeen-Fariyali.jpg',
+                name: 'Raj shree nakeen 1kg',
                 actual_price: 220,
                 discount: 15
             }, {
-                image: 'https://www.rewardsnetwork.com/wp-content/uploads/2016/01/MexicanFood_Main_Huevos.jpg',
-                name: 'MDH Bikaneri Bhujiya 1kg',
+                image: 'https://cavinkare.com/img/2017/03/Paper-Banana-Chips-130.png',
+                name: 'Garden Chips 1kg',
                 actual_price: 220,
                 discount: 30
             }, {
-                image: 'https://www.rewardsnetwork.com/wp-content/uploads/2016/01/MexicanFood_Main_Huevos.jpg',
-                name: 'Everyest Bikaneri Bhujiya 1kg',
+                image: 'https://assetscdn1.paytm.com/images/catalog/product/F/FA/FASPRAKASH-NAMKRSR-884864E1D3283A/a_0..jpg?imwidth=282&impolicy=hq',
+                name: 'Prakash Long Sev 1kg',
                 actual_price: 220,
                 discount: 40
             }, {
-                image: 'https://www.rewardsnetwork.com/wp-content/uploads/2016/01/MexicanFood_Main_Huevos.jpg',
-                name: 'Haldiram Bikaneri Bhujiya 1kg',
+                image: 'https://cdn.shopify.com/s/files/1/1910/2649/products/namkeen-channa-dal-30-gm_480x480.jpg?v=1534586593',
+                name: 'Patanjali Chana Dal 1kg',
                 actual_price: 399,
                 discount: 99
             }, {
-                image: 'https://www.rewardsnetwork.com/wp-content/uploads/2016/01/MexicanFood_Main_Huevos.jpg',
-                name: 'MAin Bikaneri Bhujiya 1kg',
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MzDOkBCYUF5kzBOKD1OQD8s7N3YZ1aywhQdNsvx_CJdJiebJ',
+                name: 'Miraj Sev 1kg',
                 actual_price: 599,
                 discount: 155
             }],
@@ -192,16 +193,16 @@ class ConfirmOrder extends Component {
         };
 
         const imageProps = {
-            customCss: `flex-direction: row; flex-wrap: wrap;height:100%;width:100%;resize-mode: cover;align-self:stretch;justify-content:center;margin:auto;`,
-            source: ''
+            customCss: `flex-direction: row; flex-wrap: wrap;height:100px;width:100px;resize-mode: cover;align-self:stretch;justify-content:center;margin:auto;`,
+            stretch: true
         };
 
         const itemImageViewProps = {
-            customCss: `padding:0px;height:80%;border:2px solid gray;`
+            customCss: `padding:0px;border:2px solid gray;width:100%;`
         };
 
         const itemContentViewProps = {
-            customCss: `flex-direction: column;height:20%;`
+            customCss: `flex-direction: column;height:20%;width:100px;`
         };
 
         const itemListNoteProps = {
